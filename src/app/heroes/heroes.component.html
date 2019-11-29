@@ -1,0 +1,26 @@
+<div class="container-sm p-3 mb-2 bg-light text-white rounded border border-danger">
+    <div class="row">
+        <div class="col-sm">
+            <h2 class="display-2 text-primary">{{titulo}}</h2>
+            <ul class="heroes p-3 mb-2 bg-dark text-white rounded">
+                <li class="border border-warning rounded-pill " *ngFor="let hero of heroes "
+                    [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+                    <span class="badge">{{hero.id}}</span> {{hero.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md">
+            <div class="p-3 mb-2 bg-warning text-dark" *ngIf="selectedHero">
+
+                <h2>{{selectedHero.name | uppercase}} Details</h2>
+                <div><span>id: </span>{{selectedHero.id}}</div>
+                <div>
+                    <label>name:
+                        <input [(ngModel)]="selectedHero.name" placeholder="name" />
+                    </label>
+                </div>
+
+            </div>
+        </div>  
+    </div>
+</div>

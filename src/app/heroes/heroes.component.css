@@ -1,0 +1,29 @@
+/*.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }*/
+  .heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+
+  .heroes li {
+      cursor: pointer;
+  }
+
+  .heroes li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+
+  .col-md {
+      margin-top: 100px;
+      margin-left: -100px;
+      margin-right: -100px;
+    }
+
+    .bg-warning {
+        width: 50%;
+    }
